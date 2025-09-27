@@ -5,7 +5,7 @@ module.exports = function withIapPlayStore(config) {
   return withAppBuildGradle(config, (config) => {
     let src = config.modResults.contents;
 
-    // Inserta la estrategia dentro de defaultConfig { ... }
+    // Insertas la estrategia dentro de defaultConfig { ... }
     if (!src.includes("missingDimensionStrategy 'store', 'play'")) {
       src = src.replace(
         /defaultConfig\s*{([\s\S]*?)}/m,
